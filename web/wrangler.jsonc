@@ -1,8 +1,17 @@
 {
-    "name": "cobalt",
+    "name": "cobalt-web",
+    "main": "src/worker.ts",
     "compatibility_date": "2025-06-01",
+    "preview_urls": false,
     "assets": {
         "directory": "./build",
-        "not_found_handling": "404-page"
-    }
+        "not_found_handling": "404-page",
+        "binding": "ASSETS"
+    },
+    "services": [
+        {
+            "binding": "COBALT_API",
+            "service": "cobalt-api"
+        }
+    ]
 }
